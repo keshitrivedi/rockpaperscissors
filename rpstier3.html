@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="rpstier3.css">
+    </head>
+    <body>
+
+        <div class="bigdiv">
+            <p class="titlepara">Rock Paper Scissors</p>
+
+        <button class="move-button" onclick="
+            playGame('Rock');
+            ">
+            <img class="icon" src="pictures\rock-default.png" alt="Rock">
+        </button>
+
+        <button class="move-button" onclick="
+            playGame('Paper');
+            ">
+            <img class="icon" src="pictures\paper-default1.jpg" alt="Paper">
+        </button>
+        
+        <button class="move-button" onclick="
+            playGame('Scissors');
+            ">
+            <img class="icon" src="pictures\scissors-default.jpg" alt="Scissors">
+        </button>
+
+        <p class="js-result result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score"></p>
+
+        <button class="reset-button" onclick="
+            score.wins = 0;
+            score.losses = 0;
+            score.ties = 0;
+            localStorage.removeItem('score');
+            updateScore();
+            ">Reset Score
+        </button>
+        </div>
+        <script src="rpstier3.js"></script>
+    </body>
+</html>
